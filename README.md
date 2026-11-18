@@ -7,6 +7,13 @@
 python -m pytest tests -q
 ```
 
+## 校验结果
+
+`verify_code(session_id, input_code)` 保持原有布尔返回。需要区分失败原因时使用
+`verify_code_result(session_id, input_code)`，其状态包括 `ok`、`invalid`、
+`not_found`、`expired`、`already_used`、`too_many_attempts` 和
+`invalid_session`。
+
 ## 平台字段
 
 所属领域：安全
